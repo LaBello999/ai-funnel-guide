@@ -1,0 +1,35 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310419663029872396/XvKBFp4Vu74cWWXD2KfRrX",
+    "access_key_id": "ASIAZV3A2ECZELPC5QIF",
+    "secret_access_key": "dbCgKuGo79IZVq60JJ3jIn94URExR07U2xghqKOP",
+    "session_token": "IQoJb3JpZ2luX2VjEND//////////wEaCXVzLWVhc3QtMSJIMEYCIQCMyjb9v14I3D5fLgPmfsww9j7U5qMIvMwEbhkhq1hx3wIhANcFVhrqcoLbq4i27lFhV7kdJSeHI5rkYltxrvJrZtw6Kv8DCJj//////////wEQBBoMNjY1Mzg2MDk4ODY2IgxVpJShaHahI4wfutMq0wNiotTMBCMpMm1NygnADDfatprLsCJ+i3EoivaIvT/o2P++3m1y9+jm2m0khQK7wn9bXsMUcadrKR6LaD/V/ScI34T3ocVXLtSVsEHVjsQnPSTf1/zr4J/l1Di49yumawLWxZFXX4tziD11uW8zPdjIlr8zbTeNheMFm9MB1+GNgl+tBB9OiIMOTQrzI7gO5KCPrAylmKWqWuRS6VPeyjr2OS+f8felizohd73u9MuNuxt2XBSw8z/o6PAjL5ti7SGT7RQnshGJu4h8Wk5wKL/qgUf8UJssw+MiJbAwr6k5U/QOv3LGAaWRotK6JKyckG+Vze4CrJrI4DkHy0BUwX269UNkuiDb66qt4H9lPHIA0UeSSy0/bSZrFAGgHLOr/bnP0iSWp1BAwq5TBsdtqk6U4XEqTk9WE/pFQn2gNvBh8WHYNjTXlwNMal4YllNvlrwxJz9XJKoL4wDfjt83ISoWKOH3hnaOHJEJU9TA3BtFilVp5eNJuBUnh0vO1w3rplyrTrRt1eE1SIR+nCy/WrSGsDooztD/g23ZJl/gDbAcAzC6Pp3+kNoyiwSbIOWC6iF8suK31rn13BRd+3gddWbTZuks60pCrJOL6VKiNbgjcsrv7DCG86PQBjqcAVzPuzlF+4GgSYNwtiZRj/5j6CHXdldm1sF+HJUi2+L5cPNHzqxoBFmQcUpoYEbh2PclAPrgrFZ74fKQnNmTfDD+z7n+oOYI+zBQ/WO7Cbd5xxWXp7UIveZIla64gUirIpTfqy0Mc+EuVeCdgY9kNGwxhA+buLZGoqmdfY5836llRiNUKTykGxtnHePJtOtdelREsY5QX8HUo+uBIw==",
+    "expiration": "2026-05-17T11:11:02.000Z"
+  },
+  "name": "ai-funnel-guide",
+  "path": "/home/ubuntu/ai-funnel-guide",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "CjR89M7fBFTtJBpBNBeM6n",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "JNnLziWHKBr9GqxShuTGJW",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Klaus Meier",
+    "OWNER_OPEN_ID": "mgzgwUb4nwsbX5J2fC7aqV",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "63f6d001-794c-4493-ad86-08d90448e8ef",
+    "VITE_APP_ID": "XvKBFp4Vu74cWWXD2KfRrX",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "AI Funnel Guide",
+    "VITE_FRONTEND_FORGE_API_KEY": "bRQDJbctDrBrsUC27C7tWX",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
