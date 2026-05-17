@@ -258,7 +258,7 @@ export default function Home() {
                 className="btn-primary-glow"
                 onClick={() => {
                   trackConversion('quiz_click');
-                  navigate('/quiz');
+                  setLocation(`/${language}/quiz`);
                 }}
               >
                 {variant.hero_cta}
@@ -267,7 +267,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => navigate('/tools')}
+                onClick={() => setLocation(`/${language}/tools`)}
               >
                 {t.hero.secondary}
               </Button>
