@@ -35,6 +35,54 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/guides" />
   </url>
   
+  <url>
+    <loc>https://aifunnelguide.com/en/blog</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/blog" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/en/blog/klicktipp-vs-make</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/blog/klicktipp-vs-make" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/en/blog/klicktipp-revenue</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/blog/klicktipp-revenue" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/en/blog/klicktipp-revenue-guide</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/blog/klicktipp-revenue-guide" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/en/blog/make-automation-guide</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/blog/make-automation-guide" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/en/blog/email-vs-automation</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/blog/email-vs-automation" />
+  </url>
+  
   <!-- German Pages -->
   <url>
     <loc>https://aifunnelguide.com/de/</loc>
@@ -66,6 +114,54 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/guides" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/de/blog</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/blog" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/de/blog/klicktipp-vs-make</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/blog/klicktipp-vs-make" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/de/blog/klicktipp-revenue</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/blog/klicktipp-revenue" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/de/blog/klicktipp-revenue-guide</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/blog/klicktipp-revenue-guide" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/de/blog/make-automation-guide</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/blog/make-automation-guide" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/de/blog/email-vs-automation</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/blog/email-vs-automation" />
   </url>
   
   <!-- Legal Pages -->
