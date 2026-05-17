@@ -15,6 +15,7 @@ import QuizPage from "./pages/QuizPage";
 import BlogPage from "./pages/BlogPage";
 import KlickTippVsMake from "./pages/BlogArticles/KlickTippVsMake";
 import KlickTippRevenue from "./pages/BlogArticles/KlickTippRevenue";
+import KlickTippRevenueGuide from "./pages/BlogArticles/KlickTippRevenueGuide";
 import LegalPage from "./pages/LegalPage";
 import CookieBanner from "./components/CookieBanner";
 import { useEffect } from "react";
@@ -82,6 +83,8 @@ function LocalizedRoutes() {
       <Route path="/de/blog/klicktipp-vs-make" component={KlickTippVsMake} />
       <Route path="/en/blog/klicktipp-revenue" component={KlickTippRevenue} />
       <Route path="/de/blog/klicktipp-revenue" component={KlickTippRevenue} />
+      <Route path="/en/blog/klicktipp-revenue-guide" component={KlickTippRevenueGuide} />
+      <Route path="/de/blog/klicktipp-revenue-guide" component={KlickTippRevenueGuide} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -50,6 +50,7 @@ const quizContent = {
             price: 'From €15/month',
             affiliate: true,
             cta: 'Start with GetResponse',
+            url: 'https://www.getresponse.com/?a=AIFUNNEL',
           },
           {
             name: 'KlickTipp',
@@ -72,6 +73,7 @@ const quizContent = {
             price: 'From €25/month',
             affiliate: true,
             cta: 'Automate Your Sales',
+            url: 'https://instantly.ai/affiliate',
           },
         ],
       },
@@ -129,11 +131,12 @@ const quizContent = {
         tools: [
           {
             name: 'GetResponse',
-            reason: 'Beste für: All-in-One Funnel-Builder mit E-Mail, Landing Pages und Webinaren',
+            reason: 'Beste für: All-in-One Funnel Builder mit E-Mail, Landing Pages und Webinaren',
             features: ['E-Mail-Sequenzen', 'Landing Pages', 'Webinar-Hosting', 'Automation-Workflows'],
             price: 'Ab €15/Monat',
             affiliate: true,
             cta: 'Mit GetResponse starten',
+            url: 'https://www.getresponse.com/?a=AIFUNNEL',
           },
           {
             name: 'KlickTipp',
@@ -151,11 +154,12 @@ const quizContent = {
         tools: [
           {
             name: 'Instantly AI',
-            reason: 'Beste für: KI-gestützte Cold-E-Mail & Sales-Automation in großem Maßstab',
+            reason: 'Beste für: KI-gestützte Cold-Email & Sales-Automation in großem Maßstab',
             features: ['E-Mail-Sequenzen', 'KI-Copywriting', 'Lead-Tracking', 'Wiederkehrende Einnahmen'],
             price: 'Ab €25/Monat',
             affiliate: true,
-            cta: 'Deinen Sales automatisieren',
+            cta: 'Deine Sales automatisieren',
+            url: 'https://instantly.ai/affiliate',
           },
         ],
       },
