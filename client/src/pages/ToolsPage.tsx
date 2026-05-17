@@ -13,6 +13,7 @@ const tools = {
       features: ['Email sequences', 'Landing pages', 'Webinar hosting', 'Automation workflows'],
       price: 'From $15/month',
       affiliate: true,
+      affiliateUrl: 'https://www.getresponse.com/?a=AIFUNNEL',
     },
     {
       name: 'KlickTipp',
@@ -21,6 +22,7 @@ const tools = {
       features: ['Email marketing', 'Automation', 'Affiliate management', 'SMS marketing'],
       price: 'From €27/month',
       affiliate: true,
+      affiliateUrl: 'https://www.klicktipp.com/partner',
     },
     {
       name: 'Instantly AI',
@@ -29,14 +31,16 @@ const tools = {
       features: ['Email sequences', 'AI copywriting', 'Lead tracking', 'Recurring revenue'],
       price: 'From $25/month',
       affiliate: true,
+      affiliateUrl: 'https://instantly.ai/affiliate',
     },
     {
-      name: 'Zapier',
+      name: 'Make',
       category: 'Automation & Integrations',
-      description: 'Connect your tools and automate workflows without coding.',
-      features: ['1000+ integrations', 'Workflow automation', 'Multi-step workflows', 'Data transfer'],
-      price: 'Free + paid plans',
-      affiliate: false,
+      description: 'Connect 1000+ apps and automate complex workflows without coding.',
+      features: ['1000+ integrations', 'Visual workflow builder', 'Advanced automation', 'Reliable execution'],
+      price: 'From $9.99/month',
+      affiliate: true,
+      affiliateUrl: 'https://www.make.com/en/register?promo=AIFUNNEL',
     },
   ],
   de: [
@@ -47,6 +51,7 @@ const tools = {
       features: ['E-Mail-Sequenzen', 'Landing Pages', 'Webinar-Hosting', 'Automation-Workflows'],
       price: 'Ab €15/Monat',
       affiliate: true,
+      affiliateUrl: 'https://www.getresponse.com/?a=AIFUNNEL',
     },
     {
       name: 'KlickTipp',
@@ -55,6 +60,7 @@ const tools = {
       features: ['E-Mail-Marketing', 'Automation', 'Affiliate-Management', 'SMS-Marketing'],
       price: 'Ab €27/Monat',
       affiliate: true,
+      affiliateUrl: 'https://www.klicktipp.com/partner',
     },
     {
       name: 'Instantly AI',
@@ -63,14 +69,16 @@ const tools = {
       features: ['E-Mail-Sequenzen', 'KI-Copywriting', 'Lead-Tracking', 'Wiederkehrende Einnahmen'],
       price: 'Ab €25/Monat',
       affiliate: true,
+      affiliateUrl: 'https://instantly.ai/affiliate',
     },
     {
-      name: 'Zapier',
+      name: 'Make',
       category: 'Automation & Integrationen',
-      description: 'Verbinde deine Tools und automatisiere Workflows ohne Code.',
-      features: ['1000+ Integrationen', 'Workflow-Automation', 'Multi-Step-Workflows', 'Datentransfer'],
-      price: 'Kostenlos + kostenpflichtige Pläne',
-      affiliate: false,
+      description: 'Verbinde 1000+ Apps und automatisiere komplexe Workflows ohne Code.',
+      features: ['1000+ Integrationen', 'Visueller Workflow-Builder', 'Erweiterte Automation', 'Zuverlässige Ausführung'],
+      price: 'Ab €9,99/Monat',
+      affiliate: true,
+      affiliateUrl: 'https://www.make.com/de/register?promo=AIFUNNEL',
     },
   ],
 };
@@ -142,7 +150,10 @@ export default function ToolsPage() {
                 <p className="text-lg font-semibold text-primary">{tool.price}</p>
               </div>
 
-              <Button className="w-full gap-2">
+              <Button 
+                className="w-full gap-2"
+                onClick={() => window.open(tool.affiliateUrl, '_blank')}
+              >
                 {language === 'en' ? 'Visit Website' : 'Website besuchen'}
                 <ExternalLink className="w-4 h-4" />
               </Button>

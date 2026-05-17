@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import GuidesPage from "./pages/GuidesPage";
 import ComparisonsPage from "./pages/ComparisonsPage";
 import ToolsPage from "./pages/ToolsPage";
+import QuizPage from "./pages/QuizPage";
 import LegalPage from "./pages/LegalPage";
 import CookieBanner from "./components/CookieBanner";
 import { useEffect } from "react";
@@ -70,6 +71,8 @@ function LocalizedRoutes() {
       <Route path="/de/comparisons" component={ComparisonsPage} />
       <Route path="/en/tools" component={ToolsPage} />
       <Route path="/de/tools" component={ToolsPage} />
+      <Route path="/en/quiz" component={QuizPage} />
+      <Route path="/de/quiz" component={QuizPage} />
       <Route component={NotFound} />
     </Switch>
   );

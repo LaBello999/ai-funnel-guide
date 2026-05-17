@@ -18,15 +18,15 @@ import { useState } from 'react';
 const navLinks = {
   en: [
     { label: 'Home', href: '/en/' },
-    { label: 'Guides', href: '/en/guides' },
-    { label: 'Comparisons', href: '/en/comparisons' },
+    { label: 'Quiz', href: '/en/quiz' },
     { label: 'Tools', href: '/en/tools' },
+    { label: 'Guides', href: '/en/guides' },
   ],
   de: [
     { label: 'Startseite', href: '/de/' },
-    { label: 'Anleitungen', href: '/de/guides' },
-    { label: 'Vergleiche', href: '/de/comparisons' },
+    { label: 'Quiz', href: '/de/quiz' },
     { label: 'Tools', href: '/de/tools' },
+    { label: 'Anleitungen', href: '/de/guides' },
   ],
 };
 
