@@ -14,6 +14,7 @@ const tools = {
       price: 'From $15/month',
       affiliate: true,
       affiliateUrl: 'https://www.getresponse.com/?a=AIFUNNEL',
+      note: 'Coming soon - PartnerStack activation in progress',
     },
     {
       name: 'KlickTipp',
@@ -22,7 +23,7 @@ const tools = {
       features: ['Email marketing', 'Automation', 'Affiliate management', 'SMS marketing'],
       price: 'From €27/month',
       affiliate: true,
-      affiliateUrl: 'https://www.klicktipp.com/partner',
+      affiliateUrl: 'https://www.klicktipp.com/?a=204688',
     },
     {
       name: 'Instantly AI',
@@ -32,6 +33,7 @@ const tools = {
       price: 'From $25/month',
       affiliate: true,
       affiliateUrl: 'https://instantly.ai/affiliate',
+      note: 'Coming soon - PartnerStack activation in progress',
     },
     {
       name: 'Make',
@@ -40,7 +42,7 @@ const tools = {
       features: ['1000+ integrations', 'Visual workflow builder', 'Advanced automation', 'Reliable execution'],
       price: 'From $9.99/month',
       affiliate: true,
-      affiliateUrl: 'https://www.make.com/en/register?promo=AIFUNNEL',
+      affiliateUrl: 'https://www.make.com/en/register?pc=vipfunnel',
     },
   ],
   de: [
@@ -52,6 +54,7 @@ const tools = {
       price: 'Ab €15/Monat',
       affiliate: true,
       affiliateUrl: 'https://www.getresponse.com/?a=AIFUNNEL',
+      note: 'Kommt bald - PartnerStack-Aktivierung läuft',
     },
     {
       name: 'KlickTipp',
@@ -60,7 +63,7 @@ const tools = {
       features: ['E-Mail-Marketing', 'Automation', 'Affiliate-Management', 'SMS-Marketing'],
       price: 'Ab €27/Monat',
       affiliate: true,
-      affiliateUrl: 'https://www.klicktipp.com/partner',
+      affiliateUrl: 'https://www.klicktipp.com/?a=204688',
     },
     {
       name: 'Instantly AI',
@@ -70,6 +73,7 @@ const tools = {
       price: 'Ab €25/Monat',
       affiliate: true,
       affiliateUrl: 'https://instantly.ai/affiliate',
+      note: 'Kommt bald - PartnerStack-Aktivierung läuft',
     },
     {
       name: 'Make',
@@ -78,7 +82,7 @@ const tools = {
       features: ['1000+ Integrationen', 'Visueller Workflow-Builder', 'Erweiterte Automation', 'Zuverlässige Ausführung'],
       price: 'Ab €9,99/Monat',
       affiliate: true,
-      affiliateUrl: 'https://www.make.com/de/register?promo=AIFUNNEL',
+      affiliateUrl: 'https://www.make.com/de/register?pc=vipfunnel',
     },
   ],
 };
@@ -149,6 +153,12 @@ export default function ToolsPage() {
               <div className="mb-6 pt-6 border-t border-border">
                 <p className="text-lg font-semibold text-primary">{tool.price}</p>
               </div>
+
+              {tool.note && (
+                <div className="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                  <p className="text-sm text-amber-800">{tool.note}</p>
+                </div>
+              )}
 
               <Button 
                 className="w-full gap-2"

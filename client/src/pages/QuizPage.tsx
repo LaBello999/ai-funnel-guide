@@ -58,6 +58,7 @@ const quizContent = {
             price: 'From €27/month',
             affiliate: true,
             cta: 'Try KlickTipp',
+            url: 'https://www.klicktipp.com/?a=204688',
           },
         ],
       },
@@ -84,6 +85,7 @@ const quizContent = {
             price: 'From €9.99/month',
             affiliate: true,
             cta: 'Automate Everything',
+            url: 'https://www.make.com/en/register?pc=vipfunnel',
           },
         ],
       },
@@ -140,6 +142,7 @@ const quizContent = {
             price: 'Ab €27/Monat',
             affiliate: true,
             cta: 'KlickTipp testen',
+            url: 'https://www.klicktipp.com/?a=204688',
           },
         ],
       },
@@ -166,6 +169,7 @@ const quizContent = {
             price: 'Ab €9,99/Monat',
             affiliate: true,
             cta: 'Alles automatisieren',
+            url: 'https://www.make.com/de/register?pc=vipfunnel',
           },
         ],
       },
@@ -287,7 +291,13 @@ export default function QuizPage() {
 
                   <div className="flex items-center justify-between pt-6 border-t border-border">
                     <p className="text-lg font-semibold text-primary">{tool.price}</p>
-                    <Button className="gap-2">
+                    <Button 
+                      className="gap-2"
+                      onClick={() => {
+                        trackConversion('tool_click');
+                        if (tool.url) window.open(tool.url, '_blank');
+                      }}
+                    >
                       {tool.cta}
                       <ArrowRight className="w-4 h-4" />
                     </Button>

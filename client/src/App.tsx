@@ -12,6 +12,9 @@ import GuidesPage from "./pages/GuidesPage";
 import ComparisonsPage from "./pages/ComparisonsPage";
 import ToolsPage from "./pages/ToolsPage";
 import QuizPage from "./pages/QuizPage";
+import BlogPage from "./pages/BlogPage";
+import KlickTippVsMake from "./pages/BlogArticles/KlickTippVsMake";
+import KlickTippRevenue from "./pages/BlogArticles/KlickTippRevenue";
 import LegalPage from "./pages/LegalPage";
 import CookieBanner from "./components/CookieBanner";
 import { useEffect } from "react";
@@ -73,6 +76,12 @@ function LocalizedRoutes() {
       <Route path="/de/tools" component={ToolsPage} />
       <Route path="/en/quiz" component={QuizPage} />
       <Route path="/de/quiz" component={QuizPage} />
+      <Route path="/en/blog" component={BlogPage} />
+      <Route path="/de/blog" component={BlogPage} />
+      <Route path="/en/blog/klicktipp-vs-make" component={KlickTippVsMake} />
+      <Route path="/de/blog/klicktipp-vs-make" component={KlickTippVsMake} />
+      <Route path="/en/blog/klicktipp-revenue" component={KlickTippRevenue} />
+      <Route path="/de/blog/klicktipp-revenue" component={KlickTippRevenue} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -20,13 +20,13 @@ const navLinks = {
     { label: 'Home', href: '/en/' },
     { label: 'Quiz', href: '/en/quiz' },
     { label: 'Tools', href: '/en/tools' },
-    { label: 'Guides', href: '/en/guides' },
+    { label: 'Blog', href: '/en/blog' },
   ],
   de: [
     { label: 'Startseite', href: '/de/' },
     { label: 'Quiz', href: '/de/quiz' },
     { label: 'Tools', href: '/de/tools' },
-    { label: 'Anleitungen', href: '/de/guides' },
+    { label: 'Blog', href: '/de/blog' },
   ],
 };
 
