@@ -11,6 +11,8 @@ import Home from "./pages/Home";
 import GuidesPage from "./pages/GuidesPage";
 import ComparisonsPage from "./pages/ComparisonsPage";
 import ToolsPage from "./pages/ToolsPage";
+import LegalPage from "./pages/LegalPage";
+import CookieBanner from "./components/CookieBanner";
 import { useEffect } from "react";
 
 /**
@@ -34,6 +36,14 @@ function Router() {
 
   return (
     <Switch>
+      {/* Legal pages (global routes) */}
+      <Route path="/imprint" component={LegalPage} />
+      <Route path="/privacy" component={LegalPage} />
+      <Route path="/terms" component={LegalPage} />
+      <Route path="/impressum" component={LegalPage} />
+      <Route path="/datenschutz" component={LegalPage} />
+      <Route path="/agb" component={LegalPage} />
+      
       {/* English routes */}
       <Route path="/en/*" component={LocalizedRoutes} />
       
@@ -73,6 +83,7 @@ function AppContent() {
         <Router />
       </main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 }
