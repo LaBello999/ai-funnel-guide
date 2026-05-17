@@ -195,9 +195,7 @@ export default function Home() {
   const [, navigate] = useRoute();
   const { variant, trackConversion } = useABTest();
 
-  if (!variant) return null; // Wait for variant to load
-
-  // SEO Optimization
+  // SEO Optimization (MUST be before early return)
   useSEO({
     title: language === 'en' 
       ? 'AI Funnel Guide - Find Your Perfect Marketing Tool' 
@@ -236,6 +234,8 @@ export default function Home() {
     twitterCard: 'summary_large_image',
     author: 'AI Funnel Guide',
   });
+
+  if (!variant) return null; // Wait for variant to load
 
   return (
     <div className="min-h-screen flex flex-col">
