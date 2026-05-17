@@ -80,8 +80,8 @@ export function useABTest() {
     localStorage.setItem(CONVERSIONS_KEY, JSON.stringify(conversions));
 
     // Send to analytics (if available)
-    if (window.gtag) {
-      window.gtag('event', 'ab_test_conversion', {
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'ab_test_conversion', {
         variant: variant.id,
         conversion_type: conversionType,
       });
