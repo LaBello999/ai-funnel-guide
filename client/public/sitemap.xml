@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- English Pages -->
+  <url>
+    <loc>https://aifunnelguide.com/en/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/en/quiz</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/quiz" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/en/tools</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/tools" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/en/guides</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aifunnelguide.com/de/guides" />
+  </url>
+  
+  <!-- German Pages -->
+  <url>
+    <loc>https://aifunnelguide.com/de/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/de/quiz</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/quiz" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/de/tools</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/tools" />
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/de/guides</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aifunnelguide.com/en/guides" />
+  </url>
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://aifunnelguide.com/impressum</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/datenschutz</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://aifunnelguide.com/agb</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+</urlset>

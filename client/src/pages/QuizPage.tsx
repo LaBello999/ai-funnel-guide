@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { useSEO } from '@/hooks/useSEO';
+import { useABTest } from '@/hooks/useABTest';
 
 const quizContent = {
   en: {
@@ -174,9 +176,39 @@ const quizContent = {
 export default function QuizPage() {
   const { language } = useLanguage();
   const t = quizContent[language];
+  const { trackConversion } = useABTest();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResults, setShowResults] = useState(false);
+
+  // SEO Optimization
+  useSEO({
+    title: language === 'en' 
+      ? 'Marketing Tool Quiz - Find Your Perfect Match' 
+      : 'Marketing-Tool Quiz - Finde dein perfektes Match',
+    description: language === 'en'
+      ? 'Take our 2-minute quiz to get personalized AI marketing tool recommendations based on your goals, budget, and experience level.'
+      : 'Mache unser 2-Minuten-Quiz und erhalte personalisierte KI-Marketing-Tool-Empfehlungen basierend auf deinen Zielen, Budget und Erfahrungslevel.',
+    keywords: language === 'en' ? [
+      'marketing tool quiz',
+      'AI tool recommendation',
+      'GetResponse vs KlickTipp',
+      'marketing automation quiz',
+      'best marketing tool',
+    ] : [
+      'Marketing-Tool Quiz',
+      'KI-Tool-Empfehlung',
+      'GetResponse vs KlickTipp',
+      'Marketing-Automation Quiz',
+      'bestes Marketing-Tool',
+    ],
+    canonical: window.location.href,
+    ogTitle: language === 'en' ? 'Marketing Tool Quiz - Find Your Perfect Match' : 'Marketing-Tool Quiz - Finde dein perfektes Match',
+    ogDescription: language === 'en'
+      ? 'Get personalized recommendations in 2 minutes'
+      : 'Erhalte personalisierte Empfehlungen in 2 Minuten',
+    twitterCard: 'summary',
+  });
 
   const handleAnswer = (value: string) => {
     const questionId = t.questions[currentQuestion].id;
@@ -185,6 +217,7 @@ export default function QuizPage() {
     if (currentQuestion < t.questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
+      trackConversion('quiz_click');
       setShowResults(true);
     }
   };

@@ -3,6 +3,8 @@ import { Card } from '@/components/ui/card';
 import { ArrowRight, CheckCircle, Zap, TrendingUp, Users, Target } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useRoute } from 'wouter';
+import { useABTest } from '@/hooks/useABTest';
+import { useSEO, schemas } from '@/hooks/useSEO';
 
 /**
  * Home Page – AI Funnel Guide
@@ -191,6 +193,49 @@ export default function Home() {
   const { language } = useLanguage();
   const t = content[language];
   const [, navigate] = useRoute();
+  const { variant, trackConversion } = useABTest();
+
+  if (!variant) return null; // Wait for variant to load
+
+  // SEO Optimization
+  useSEO({
+    title: language === 'en' 
+      ? 'AI Funnel Guide - Find Your Perfect Marketing Tool' 
+      : 'AI Funnel Guide - Finde dein perfektes Marketing-Tool',
+    description: language === 'en'
+      ? 'Independent guide to AI-powered marketing automation. Compare GetResponse, KlickTipp, Instantly AI & Make. Get personalized recommendations.'
+      : 'Unabhängiger Leitfaden zu KI-gestützter Marketing-Automation. Vergleiche GetResponse, KlickTipp, Instantly AI & Make. Erhalte personalisierte Empfehlungen.',
+    keywords: language === 'en' ? [
+      'AI marketing tools',
+      'marketing automation',
+      'GetResponse',
+      'KlickTipp',
+      'Instantly AI',
+      'Make automation',
+      'email marketing',
+      'sales automation',
+      'marketing funnel',
+      'conversion optimization',
+    ] : [
+      'KI Marketing Tools',
+      'Marketing Automation',
+      'GetResponse',
+      'KlickTipp',
+      'Instantly AI',
+      'Make Automation',
+      'E-Mail Marketing',
+      'Sales Automation',
+      'Marketing Funnel',
+      'Conversion Optimierung',
+    ],
+    canonical: window.location.href,
+    ogTitle: language === 'en' ? 'AI Funnel Guide - Find Your Perfect Marketing Tool' : 'AI Funnel Guide - Finde dein perfektes Marketing-Tool',
+    ogDescription: language === 'en'
+      ? 'Stop guessing. Get personalized AI marketing tool recommendations in 2 minutes.'
+      : 'Hör auf zu raten. Erhalte personalisierte KI-Marketing-Tool-Empfehlungen in 2 Minuten.',
+    twitterCard: 'summary_large_image',
+    author: 'AI Funnel Guide',
+  });
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -202,7 +247,7 @@ export default function Home() {
               {t.hero.title}
             </h1>
             <p className="text-2xl md:text-3xl font-semibold text-primary mb-4">
-              {t.hero.subtitle}
+              {variant.hero_subtitle}
             </p>
             <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
               {t.hero.description}
@@ -211,9 +256,12 @@ export default function Home() {
               <Button
                 size="lg"
                 className="btn-primary-glow"
-                onClick={() => navigate('/quiz')}
+                onClick={() => {
+                  trackConversion('quiz_click');
+                  navigate('/quiz');
+                }}
               >
-                {t.hero.cta}
+                {variant.hero_cta}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
@@ -233,7 +281,7 @@ export default function Home() {
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              {t.problem.title}
+              {variant.problem_title}
             </h2>
             <p className="text-lg text-muted-foreground mb-12 text-center">
               {t.problem.description}
@@ -265,9 +313,12 @@ export default function Home() {
             <Button
               size="lg"
               className="btn-primary-glow"
-              onClick={() => navigate('/quiz')}
+              onClick={() => {
+                trackConversion('quiz_click');
+                navigate('/quiz');
+              }}
             >
-              {t.solution.cta}
+              {variant.solution_cta}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
@@ -335,7 +386,10 @@ export default function Home() {
             <Button
               size="lg"
               className="btn-primary-glow"
-              onClick={() => navigate('/quiz')}
+              onClick={() => {
+                trackConversion('quiz_click');
+                navigate('/quiz');
+              }}
             >
               {t.cta.button}
               <ArrowRight className="ml-2 w-5 h-5" />
