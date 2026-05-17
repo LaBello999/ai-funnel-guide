@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ArrowRight, CheckCircle, Zap, TrendingUp, Users, Target } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useRoute } from 'wouter';
+import { useLocation } from 'wouter';
 import { useABTest } from '@/hooks/useABTest';
 import { useSEO, schemas } from '@/hooks/useSEO';
 
@@ -192,7 +192,7 @@ const content = {
 export default function Home() {
   const { language } = useLanguage();
   const t = content[language];
-  const [, navigate] = useRoute();
+  const [, setLocation] = useLocation();
   const { variant, trackConversion } = useABTest();
 
   // SEO Optimization (MUST be before early return)
@@ -315,7 +315,7 @@ export default function Home() {
               className="btn-primary-glow"
               onClick={() => {
                 trackConversion('quiz_click');
-                navigate('/quiz');
+                setLocation(`/${language}/quiz`);
               }}
             >
               {variant.solution_cta}
@@ -388,7 +388,7 @@ export default function Home() {
               className="btn-primary-glow"
               onClick={() => {
                 trackConversion('quiz_click');
-                navigate('/quiz');
+                setLocation(`/${language}/quiz`);
               }}
             >
               {t.cta.button}

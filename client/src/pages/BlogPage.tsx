@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useRoute } from 'wouter';
+import { useLocation } from 'wouter';
 import { ArrowRight, Calendar, User, Clock } from 'lucide-react';
 import { useSEO } from '@/hooks/useSEO';
 
@@ -94,7 +94,7 @@ const blogPosts = {
 
 export default function BlogPage() {
   const { language } = useLanguage();
-  const [, navigate] = useRoute();
+  const [, setLocation] = useLocation();
   const posts = blogPosts[language];
 
   useSEO({
@@ -147,10 +147,10 @@ export default function BlogPage() {
               key={post.id} 
               className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer flex flex-col"
               onClick={() => {
-                if (post.id === 'klicktipp-vs-make') navigate(`/${language}/blog/klicktipp-vs-make`);
-                else if (post.id === 'klicktipp-revenue') navigate(`/${language}/blog/klicktipp-revenue`);
-                else if (post.id === 'make-automation-guide') navigate(`/${language}/blog/make-automation-guide`);
-                else if (post.id === 'email-vs-automation') navigate(`/${language}/blog/email-vs-automation`);
+                if (post.id === 'klicktipp-vs-make') setLocation(`/${language}/blog/klicktipp-vs-make`);
+                else if (post.id === 'klicktipp-revenue') setLocation(`/${language}/blog/klicktipp-revenue`);
+                else if (post.id === 'make-automation-guide') setLocation(`/${language}/blog/make-automation-guide`);
+                else if (post.id === 'email-vs-automation') setLocation(`/${language}/blog/email-vs-automation`);
               }}
             >
               {/* Featured Image */}
