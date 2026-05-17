@@ -16,6 +16,8 @@ import BlogPage from "./pages/BlogPage";
 import KlickTippVsMake from "./pages/BlogArticles/KlickTippVsMake";
 import KlickTippRevenue from "./pages/BlogArticles/KlickTippRevenue";
 import KlickTippRevenueGuide from "./pages/BlogArticles/KlickTippRevenueGuide";
+import MakeAutomationGuide from "./pages/BlogArticles/MakeAutomationGuide";
+import EmailVsAutomation from "./pages/BlogArticles/EmailVsAutomation";
 import LegalPage from "./pages/LegalPage";
 import CookieBanner from "./components/CookieBanner";
 import { useEffect } from "react";
@@ -85,6 +87,10 @@ function LocalizedRoutes() {
       <Route path="/de/blog/klicktipp-revenue" component={KlickTippRevenue} />
       <Route path="/en/blog/klicktipp-revenue-guide" component={KlickTippRevenueGuide} />
       <Route path="/de/blog/klicktipp-revenue-guide" component={KlickTippRevenueGuide} />
+      <Route path="/en/blog/make-automation-guide" component={MakeAutomationGuide} />
+      <Route path="/de/blog/make-automation-guide" component={MakeAutomationGuide} />
+      <Route path="/en/blog/email-vs-automation" component={EmailVsAutomation} />
+      <Route path="/de/blog/email-vs-automation" component={EmailVsAutomation} />
       <Route component={NotFound} />
     </Switch>
   );

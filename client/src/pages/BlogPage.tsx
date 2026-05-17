@@ -146,7 +146,12 @@ export default function BlogPage() {
             <Card 
               key={post.id} 
               className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer flex flex-col"
-              onClick={() => navigate(`/blog/${post.id}`)}
+              onClick={() => {
+                if (post.id === 'klicktipp-vs-make') navigate(`/${language}/blog/klicktipp-vs-make`);
+                else if (post.id === 'klicktipp-revenue') navigate(`/${language}/blog/klicktipp-revenue`);
+                else if (post.id === 'make-automation-guide') navigate(`/${language}/blog/make-automation-guide`);
+                else if (post.id === 'email-vs-automation') navigate(`/${language}/blog/email-vs-automation`);
+              }}
             >
               {/* Featured Image */}
               <div className="h-40 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-6xl">
