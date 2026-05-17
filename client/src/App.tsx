@@ -99,9 +99,17 @@ function LocalizedRoutes() {
 function AppContent() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Router />
+    </div>
+  );
+}
+
+function LayoutWithNavigation() {
+  return (
+    <div className="flex flex-col min-h-screen">
       <Navigation />
       <main className="flex-1">
-        <Router />
+        <AppContent />
       </main>
       <Footer />
       <CookieBanner />
@@ -116,7 +124,7 @@ function App() {
         <LanguageProvider>
           <TooltipProvider>
             <Toaster />
-            <AppContent />
+            <LayoutWithNavigation />
           </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>
