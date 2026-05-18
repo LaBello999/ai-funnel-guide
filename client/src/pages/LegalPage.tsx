@@ -57,8 +57,52 @@ export default function LegalPage() {
         changes: "Changes to Terms",
         changesText: "We reserve the right to modify these terms at any time. Your continued use of the website constitutes your acceptance of any changes.",
       },
+      affiliateDisclosure: {
+        title: "Affiliate Disclosure",
+        intro: "We believe in transparency. This page discloses our affiliate relationships and how we earn commissions.",
+        disclosure: "Affiliate Relationships",
+        disclosureText: "AI Funnel Guide participates in affiliate programs with GetResponse, KlickTipp, Instantly AI, Make, and other marketing platforms. When you click our affiliate links and make a purchase, we earn a commission at no additional cost to you.",
+        independence: "Our Independence",
+        independenceText: "Our recommendations are based on thorough testing and real-world usage. We only recommend products we genuinely believe will help you build better funnels. Our affiliate relationships do not influence our editorial opinions.",
+        transparency: "How We Use Commissions",
+        transparencyText: "Commissions help us keep this guide free and updated with the latest tools and strategies. We reinvest earnings into research, testing, and creating better content for you.",
+      },
+      contact: {
+        title: "Contact",
+        intro: "Have questions or feedback? We'd love to hear from you.",
+        email: "Email",
+        emailText: "For general inquiries: hello@aifunnelguide.com",
+        support: "Support",
+        supportText: "For affiliate or partnership inquiries: mehrwertsales@gmail.com",
+        phone: "Phone",
+        phoneText: "+49 152 23292905 (German/English)",
+        hours: "Response Time",
+        hoursText: "We typically respond to inquiries within 24-48 hours during business days.",
+      },
     },
     de: {
+      affiliateDisclosure: {
+        title: "Affiliate-Offenlegung",
+        intro: "Wir glauben an Transparenz. Diese Seite offenbart unsere Affiliate-Beziehungen und wie wir Provisionen verdienen.",
+        disclosure: "Affiliate-Beziehungen",
+        disclosureText: "AI Funnel Guide nimmt an Affiliate-Programmen mit GetResponse, KlickTipp, Instantly AI, Make und anderen Marketing-Plattformen teil. Wenn Sie auf unsere Affiliate-Links klicken und einen Kauf tätigen, verdienen wir eine Provision ohne zusätzliche Kosten für Sie.",
+        independence: "Unsere Unabhängigkeit",
+        independenceText: "Unsere Empfehlungen basieren auf gründlichen Tests und realer Nutzung. Wir empfehlen nur Produkte, an die wir wirklich glauben. Unsere Affiliate-Beziehungen beeinflussen unsere redaktionellen Meinungen nicht.",
+        transparency: "Wie wir Provisionen verwenden",
+        transparencyText: "Provisionen helfen uns, diesen Leitfaden kostenlos und aktuell zu halten. Wir reinvestieren Einnahmen in Forschung, Tests und bessere Inhalte für Sie.",
+      },
+      contact: {
+        title: "Kontakt",
+        intro: "Haben Sie Fragen oder Feedback? Wir freuen uns, von Ihnen zu hören.",
+        email: "E-Mail",
+        emailText: "Für allgemeine Anfragen: hello@aifunnelguide.com",
+        support: "Unterstützung",
+        supportText: "Für Affiliate- oder Partnerschaftsanfragen: mehrwertsales@gmail.com",
+        phone: "Telefon",
+        phoneText: "+49 152 23292905 (Deutsch/Englisch)",
+        hours: "Antwortzeit",
+        hoursText: "Wir antworten normalerweise innerhalb von 24-48 Stunden an Arbeitstagen.",
+      },
       imprint: {
         title: "Impressum",
         operator: "Betreiber",
@@ -110,7 +154,7 @@ export default function LegalPage() {
 
   const isGerman = location.includes("/de") || location.includes("/impressum") || location.includes("/datenschutz") || location.includes("/agb");
   const t = content[isGerman ? "de" : "en"] as any;
-  const section = isImprint ? t.imprint : isPrivacy ? t.privacy : isTerms ? t.terms : t.terms;
+  const section = isImprint ? t.imprint : isPrivacy ? t.privacy : isTerms ? t.terms : isAffiliateDisclosure ? t.affiliateDisclosure : t.contact;
 
   return (
     <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
@@ -249,6 +293,67 @@ export default function LegalPage() {
                 {section.changes}
               </h2>
               <p className="text-card-foreground">{section.changesText}</p>
+            </div>
+          </>
+        )}
+
+        {isAffiliateDisclosure && (
+          <>
+            <p className="text-lg text-foreground mb-6">{section.intro}</p>
+
+            <div className="bg-card rounded-lg p-6 mb-6">
+              <h2 className="text-2xl font-bold mb-4 text-card-foreground">
+                {section.disclosure}
+              </h2>
+              <p className="text-card-foreground">{section.disclosureText}</p>
+            </div>
+
+            <div className="bg-card rounded-lg p-6 mb-6">
+              <h2 className="text-2xl font-bold mb-4 text-card-foreground">
+                {section.independence}
+              </h2>
+              <p className="text-card-foreground">{section.independenceText}</p>
+            </div>
+
+            <div className="bg-card rounded-lg p-6">
+              <h2 className="text-2xl font-bold mb-4 text-card-foreground">
+                {section.transparency}
+              </h2>
+              <p className="text-card-foreground">{section.transparencyText}</p>
+            </div>
+          </>
+        )}
+
+        {isContact && (
+          <>
+            <p className="text-lg text-foreground mb-6">{section.intro}</p>
+
+            <div className="bg-card rounded-lg p-6 mb-6">
+              <h2 className="text-2xl font-bold mb-4 text-card-foreground">
+                {section.email}
+              </h2>
+              <p className="text-card-foreground">{section.emailText}</p>
+            </div>
+
+            <div className="bg-card rounded-lg p-6 mb-6">
+              <h2 className="text-2xl font-bold mb-4 text-card-foreground">
+                {section.support}
+              </h2>
+              <p className="text-card-foreground">{section.supportText}</p>
+            </div>
+
+            <div className="bg-card rounded-lg p-6 mb-6">
+              <h2 className="text-2xl font-bold mb-4 text-card-foreground">
+                {section.phone}
+              </h2>
+              <p className="text-card-foreground">{section.phoneText}</p>
+            </div>
+
+            <div className="bg-card rounded-lg p-6">
+              <h2 className="text-2xl font-bold mb-4 text-card-foreground">
+                {section.hours}
+              </h2>
+              <p className="text-card-foreground">{section.hoursText}</p>
             </div>
           </>
         )}
