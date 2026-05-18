@@ -43,13 +43,15 @@ function Router() {
 
   return (
     <Switch>
-      {/* Legal pages (global routes) */}
+      {/* Legal pages (global routes for backward compatibility) */}
       <Route path="/imprint" component={LegalPage} />
       <Route path="/privacy" component={LegalPage} />
       <Route path="/terms" component={LegalPage} />
       <Route path="/impressum" component={LegalPage} />
       <Route path="/datenschutz" component={LegalPage} />
       <Route path="/agb" component={LegalPage} />
+      <Route path="/affiliate-disclosure" component={LegalPage} />
+      <Route path="/contact" component={LegalPage} />
       
       {/* English routes */}
       <Route path="/en/*" component={LocalizedRoutes} />
@@ -91,6 +93,17 @@ function LocalizedRoutes() {
       <Route path="/de/blog/make-automation-guide" component={MakeAutomationGuide} />
       <Route path="/en/blog/email-vs-automation" component={EmailVsAutomation} />
       <Route path="/de/blog/email-vs-automation" component={EmailVsAutomation} />
+      {/* Legal pages with language prefix */}
+      <Route path="/en/privacy" component={LegalPage} />
+      <Route path="/de/privacy" component={LegalPage} />
+      <Route path="/en/terms" component={LegalPage} />
+      <Route path="/de/terms" component={LegalPage} />
+      <Route path="/en/imprint" component={LegalPage} />
+      <Route path="/de/imprint" component={LegalPage} />
+      <Route path="/en/affiliate-disclosure" component={LegalPage} />
+      <Route path="/de/affiliate-disclosure" component={LegalPage} />
+      <Route path="/en/contact" component={LegalPage} />
+      <Route path="/de/contact" component={LegalPage} />
       <Route component={NotFound} />
     </Switch>
   );

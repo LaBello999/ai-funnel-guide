@@ -3,9 +3,11 @@ import { useLocation } from "wouter";
 export default function LegalPage() {
   const [location] = useLocation();
   
-  const isImprint = location === "/imprint" || location === "/impressum";
-  const isPrivacy = location === "/privacy" || location === "/datenschutz";
-  const isTerms = location === "/terms" || location === "/agb";
+  const isImprint = location === "/imprint" || location === "/impressum" || location.includes("/imprint");
+  const isPrivacy = location === "/privacy" || location === "/datenschutz" || location.includes("/privacy");
+  const isTerms = location === "/terms" || location === "/agb" || location.includes("/terms");
+  const isAffiliateDisclosure = location.includes("/affiliate-disclosure");
+  const isContact = location.includes("/contact");
 
   const content = {
     en: {
@@ -106,8 +108,9 @@ export default function LegalPage() {
     },
   };
 
-  const t = content[location.includes("/de") || location.includes("/impressum") || location.includes("/datenschutz") || location.includes("/agb") ? "de" : "en"] as any;
-  const section = isImprint ? t.imprint : isPrivacy ? t.privacy : t.terms;
+  const isGerman = location.includes("/de") || location.includes("/impressum") || location.includes("/datenschutz") || location.includes("/agb");
+  const t = content[isGerman ? "de" : "en"] as any;
+  const section = isImprint ? t.imprint : isPrivacy ? t.privacy : isTerms ? t.terms : t.terms;
 
   return (
     <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
