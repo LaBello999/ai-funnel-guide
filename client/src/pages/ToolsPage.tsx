@@ -14,7 +14,6 @@ const tools = {
       price: 'From $15/month',
       affiliate: true,
       affiliateUrl: 'https://www.getresponse.com/?a=AIFUNNEL',
-      note: 'Coming soon - PartnerStack activation in progress',
     },
     {
       name: 'KlickTipp',
@@ -33,7 +32,6 @@ const tools = {
       price: 'From $25/month',
       affiliate: true,
       affiliateUrl: 'https://instantly.ai/affiliate',
-      note: 'Coming soon - PartnerStack activation in progress',
     },
     {
       name: 'Make',
@@ -54,7 +52,6 @@ const tools = {
       price: 'Ab €15/Monat',
       affiliate: true,
       affiliateUrl: 'https://www.getresponse.com/?a=AIFUNNEL',
-      note: 'Kommt bald - PartnerStack-Aktivierung läuft',
     },
     {
       name: 'KlickTipp',
@@ -73,7 +70,6 @@ const tools = {
       price: 'Ab €25/Monat',
       affiliate: true,
       affiliateUrl: 'https://instantly.ai/affiliate',
-      note: 'Kommt bald - PartnerStack-Aktivierung läuft',
     },
     {
       name: 'Make',
